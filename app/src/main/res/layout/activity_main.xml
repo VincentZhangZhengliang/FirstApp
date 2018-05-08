@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/activity_main_bnv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x78"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/c_FFCCBC"
+        app:menu="@menu/bottom_navi_menu"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_main_bnv"/>
+
+</RelativeLayout>
