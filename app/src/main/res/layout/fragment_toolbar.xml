@@ -5,10 +5,22 @@
              android:layout_height="match_parent"
              tools:context=".ui.toolbar.ToolbarFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:background="@color/c_4CAF50"
+            android:id="@+id/fragment_toolbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

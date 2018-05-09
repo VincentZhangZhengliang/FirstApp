@@ -7,4 +7,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.toolbar.ToolbarActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_toolbar_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/c_4CAF50"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:popupTheme="@style/ToolbarTheme"
+        app:titleTextColor="@color/c_FFFFFF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Toolbar的展示"
+            android:textColor="@color/c_FFFFFF"/>
+
+    </android.support.v7.widget.Toolbar>
+
 </android.support.constraint.ConstraintLayout>

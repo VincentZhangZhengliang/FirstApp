@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="ToolbarTheme" parent="AppTheme">
+
+        <item name="android:colorBackground">@color/c_4CAF50</item>
+        <item name="android:textColorPrimary">@color/c_FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuTheme</item>
+        <item name="android:paddingRight">@dimen/x_5</item>
+        <item name="searchViewStyle">@style/SearchivewStyle
+        </item>
+    </style>
+
+    <style name="OverflowMenuTheme" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <style name="SearchivewStyle" parent="Widget.AppCompat.Light.SearchView">
+        <item name="searchIcon">@null</item>
+        <item name="searchHintIcon">@null</item>
+        <item name="android:textCursorDrawable">@color/c_FFFFFF</item>
+    </style>
 </resources>
