@@ -6,5 +6,17 @@
     <string name="home">首页</string>
     <string name="event">活动</string>
     <string name="account">账户</string>
+    <string name="search">搜索</string>
+    <string name="ride">骑行</string>
+    <string name="other">其他</string>
+    <string name="more">更多</string>
+    <string name="radio">广播</string>
+    <string name="music">音乐</string>
+    <string name="delete">删除</string>
+    <string name="group1">group1</string>
+    <string name="group2">group2</string>
+    <string name="group3">group3</string>
+    <string name="navigation_drawer_open">navigation_drawer_open</string>
+    <string name="navigation_drawer_close">navigation_drawer_close</string>
 
 </resources>

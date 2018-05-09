@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import com.joker.firstapp.ui.account.fragment.AccountFragment
 import com.joker.firstapp.ui.event.fragment.EventFragment
 import com.joker.firstapp.ui.home.fragment.HomeFragment
+import com.joker.firstapp.ui.toolbar.ToolbarFragment
 
 /**
  * Created by Vincent;
@@ -19,11 +20,12 @@ class MainAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             0 -> HomeFragment()
             1 -> EventFragment()
             2 -> AccountFragment()
+            3 -> ToolbarFragment()
             else -> HomeFragment()
         }
     }
 
     override fun getCount(): Int {
-        return 3
+        return 4
     }
 }

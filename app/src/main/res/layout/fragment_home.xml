@@ -5,9 +5,32 @@
              android:layout_height="match_parent"
              tools:context=".ui.home.fragment.HomeFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/home"/>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fragment_home_tv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Toolbar"/>
+
+        <TextView
+            android:id="@+id/fragment_home_tv_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="navigation"/>
+
+        <TextView
+            android:id="@+id/fragment_home_tv_transition"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="transition"/>
+
+    </LinearLayout>
 
 </FrameLayout>
