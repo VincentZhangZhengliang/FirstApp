@@ -1,7 +1,8 @@
 package com.joker.firstapp.ui.transition
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.joker.firstapp.R
 
 class TransitionContentActivity : AppCompatActivity() {
 
