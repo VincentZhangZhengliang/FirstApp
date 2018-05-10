@@ -6,7 +6,14 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.joker.firstapp.adapter.MainAdapter
+import com.joker.firstapp.api.Api
+import com.joker.firstapp.ui.login.bean.LoginBean
+import io.reactivex.Observer
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -15,6 +22,24 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener, Bottom
         setContentView(R.layout.activity_main)
         initView()
         initListener()
+        Api.login("VincentZhang", "zhang343568").subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(object : Observer<LoginBean> {
+                    override fun onComplete() {
+                    }
+
+                    override fun onSubscribe(d: Disposable) {
+                    }
+
+                    override fun onNext(t: LoginBean) {
+                        Timber.e(t.toString())
+                    }
+
+                    override fun onError(e: Throwable) {
+
+                    }
+
+                })
     }
 
     private fun initListener() {

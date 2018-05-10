@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.joker.firstapp.R
+import com.joker.firstapp.ui.coordinator.activity.CoordinatorActivity
 import com.joker.firstapp.ui.navigation.NavigationActivity
 import com.joker.firstapp.ui.toolbar.ToolbarActivity
 import com.joker.firstapp.ui.transition.TransitionActivity
@@ -34,6 +35,7 @@ class HomeFragment : Fragment() {
         fragment_home_tv_toolbar.setOnClickListener { startActivity(Intent(activity, ToolbarActivity::class.java)) }
         fragment_home_tv_navigation.setOnClickListener { startActivity(Intent(activity, NavigationActivity::class.java)) }
         fragment_home_tv_transition.setOnClickListener { startActivity(Intent(activity, TransitionActivity::class.java)) }
+        fragment_home_tv_coordinator.setOnClickListener { startActivity(Intent(activity, CoordinatorActivity::class.java)) }
     }
 
 

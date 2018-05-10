@@ -34,7 +34,6 @@ class TransitionActivity : AppCompatActivity() {
                 val pair2 = Pair(tv!! as View, "shared_textview")
                 val optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this@TransitionActivity, pair1, pair2)
                 this@TransitionActivity.startActivity(intent, optionsCompat.toBundle())
-
             }
 
             override fun onItemLongClick(view: View, position: Int) {
