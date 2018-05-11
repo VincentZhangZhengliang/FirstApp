@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
 
+//    private val resId = intArrayOf(R.drawable.guide_1, R.drawable.guide_2, R.drawable.guide_3, R.drawable.guide_4)
     private val resId = intArrayOf(R.drawable.splash_1, R.drawable.splash_2, R.drawable.splash_3, R.drawable.splash_4)
 
     override fun onPageScrollStateChanged(state: Int) {
@@ -43,20 +44,20 @@ class SplashActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
                 val mutedDark = palette?.darkMutedSwatch//柔和的，暗色
 
                 val mutedLight = palette?.lightMutedSwatch//柔和的,亮色
-                setUI(vibrantLight!!)
+                setUI(vibrantLight)
             }
         })
 
     }
 
-    fun setUI(swatch: Palette.Swatch) {
-        val population = swatch.population          //样本中的像素数量
-        val rgb = swatch.rgb                        //颜色的RBG值
-        val hsl = swatch.hsl                 // 颜色的HSL值
-        val bodyTextColor = swatch.bodyTextColor    //: 主体文字的颜色值
-        val titleTextColor = swatch.titleTextColor  //: 标题文字的颜色值
-        activity_splash_btn_to_find.setTextColor(bodyTextColor)
-        activity_splash_btn_skip.setTextColor(bodyTextColor)
+    fun setUI(swatch: Palette.Swatch?) {
+        val population = swatch?.population          //样本中的像素数量
+        val rgb = swatch?.rgb                        //颜色的RBG值
+        val hsl = swatch?.hsl                 // 颜色的HSL值
+        val bodyTextColor = swatch?.bodyTextColor    //: 主体文字的颜色值
+        val titleTextColor = swatch?.titleTextColor  //: 标题文字的颜色值
+        activity_splash_btn_to_find.setTextColor(rgb?:R.color.c_FFFFFF)
+        activity_splash_btn_skip.setTextColor(rgb?:R.color.c_FFFFFF)
     }
 
 
