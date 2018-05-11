@@ -9,9 +9,18 @@
     <color name="c_FF5722">#FF5722</color>
     <color name="c_FFFFFF">#FFFFFF</color>
     <color name="c_4CAF50">#4caf50</color>
+    <color name="c_994CAF50">#994caf50</color>
     <color name="c_212121">#212121</color>
     <color name="c_757575">#757575</color>
     <color name="c_BDBDBD">#BDBDBD</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_aaaaaa">#aaaaaa</color>
+    <color name="c_bbbbbb">#bbbbbb</color>
+    <color name="c_cccccc">#cccccc</color>
+    <color name="c_dddddd">#dddddd</color>
+    <color name="c_eeeeee">#eeeeee</color>
 
     <color name="c_000000000">#00000000</color>
 </resources>

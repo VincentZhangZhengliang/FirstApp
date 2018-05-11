@@ -18,5 +18,10 @@ object Constant {
     const val CONNECT_TIMEOUT = 30L
     const val READ_TIMEOUT = 10L
 
+    const val SPLASH_IMG = "https://img.topzrt.com/adv/img/5621b999-481c-4c4c-ba89-f62827ffbedd.jpg"
+
+    const val FIRST_START = "first"
+
+
 
 }

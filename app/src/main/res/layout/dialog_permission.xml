@@ -1,75 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/c_FFFFFF">
-
+    android:background="@drawable/shape_bg_radius_5">
 
     <TextView
         android:id="@+id/dialog_permission_tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="权限说明"
+        android:layout_marginEnd="@dimen/x16"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x16"
+        android:layout_marginStart="@dimen/x16"
+        android:layout_marginTop="@dimen/x32"
         android:textAllCaps="true"
         android:textColor="@color/c_4CAF50"
         android:textSize="16sp"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/dialog_permission_tv_content"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="所有的安静都是人造的冷清"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_title" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x32"
+        android:layout_marginRight="@dimen/x32"
+        android:layout_marginTop="@dimen/x32"
+        android:textColor="@color/c_212121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dialog_permission_tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_title"/>
 
     <Button
         android:id="@+id/dialog_permission_btn_cancel"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
+        android:layout_height="@dimen/x56"
+        android:layout_marginBottom="@dimen/x32"
+        android:layout_marginEnd="@dimen/x8"
+        android:layout_marginLeft="@dimen/x32"
+        android:layout_marginRight="@dimen/x8"
+        android:layout_marginStart="@dimen/x32"
+        android:layout_marginTop="@dimen/x32"
+        android:background="@drawable/selector_btn_confirm"
+        android:paddingLeft="@dimen/x60"
+        android:paddingRight="@dimen/x60"
+        android:textColor="@color/c_FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/dialog_permission_btn_confirm"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_content"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_content"/>
 
     <Button
         android:id="@+id/dialog_permission_btn_confirm"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Button"
+        android:layout_height="@dimen/x56"
+        android:layout_marginBottom="@dimen/x16"
+        android:layout_marginEnd="@dimen/x32"
+        android:layout_marginLeft="@dimen/x16"
+        android:layout_marginRight="@dimen/x32"
+        android:layout_marginStart="@dimen/x16"
+        android:layout_marginTop="@dimen/x16"
+        android:background="@drawable/selector_btn_confirm"
+        android:paddingLeft="@dimen/x60"
+        android:paddingRight="@dimen/x60"
+        android:textColor="@color/c_FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dialog_permission_btn_cancel"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_content" />
+        app:layout_constraintTop_toBottomOf="@+id/dialog_permission_tv_content"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/x32"
+        android:layout_marginStart="@dimen/x32"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_permission_tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dialog_permission_tv_title"
+        app:srcCompat="@drawable/ic_svg_info"
+        tools:ignore="VectorDrawableCompat"/>
 
 </android.support.constraint.ConstraintLayout>

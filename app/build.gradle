@@ -53,5 +53,5 @@ dependencies {
     implementation 'com.jakewharton.timber:timber:4.6.1'
     //权限
     implementation 'com.yanzhenjie:permission:2.0.0-rc4'
-
+    implementation 'com.android.support:palette-v7:26.1.0'
 }
