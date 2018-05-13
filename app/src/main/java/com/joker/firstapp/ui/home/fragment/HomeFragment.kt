@@ -32,10 +32,10 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        fragment_home_tv_toolbar.setOnClickListener { startActivity(Intent(activity, ToolbarActivity::class.java)) }
-        fragment_home_tv_navigation.setOnClickListener { startActivity(Intent(activity, NavigationActivity::class.java)) }
-        fragment_home_tv_transition.setOnClickListener { startActivity(Intent(activity, TransitionActivity::class.java)) }
-        fragment_home_tv_coordinator.setOnClickListener { startActivity(Intent(activity, CoordinatorActivity::class.java)) }
+//        fragment_home_tv_toolbar.setOnClickListener { startActivity(Intent(activity, ToolbarActivity::class.java)) }
+//        fragment_home_tv_navigation.setOnClickListener { startActivity(Intent(activity, NavigationActivity::class.java)) }
+//        fragment_home_tv_transition.setOnClickListener { startActivity(Intent(activity, TransitionActivity::class.java)) }
+//        fragment_home_tv_coordinator.setOnClickListener { startActivity(Intent(activity, CoordinatorActivity::class.java)) }
     }
 
 

@@ -2,6 +2,8 @@ package com.joker.firstapp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
+import kotlin.math.log
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -10,11 +12,11 @@ import kotlin.reflect.KProperty
  * Created on 2018/5/10;
  * DSC:
  */
-class Preference<T>(val name: String, val defValue: T) : ReadWriteProperty<Any?, T> {
+class Preference<T>(val name : String, val defValue : T) : ReadWriteProperty<Any?, T> {
 
     companion object {
-        lateinit var preferences: SharedPreferences
-        fun setContext(context: Context) {
+        lateinit var preferences : SharedPreferences
+        fun setContext(context : Context) {
             preferences = context.getSharedPreferences(context.packageName + Constant.SHARED_NAME, Context.MODE_PRIVATE)
         }
 
@@ -23,30 +25,30 @@ class Preference<T>(val name: String, val defValue: T) : ReadWriteProperty<Any?,
         }
     }
 
-    override fun getValue(thisRef: Any?, property: KProperty<*>): T = findPreference(name, defValue)
-    override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) = putPreference(name, defValue)
+    override fun getValue(thisRef : Any?, property : KProperty<*>) : T = findPreference(name, defValue)
+    override fun setValue(thisRef : Any?, property : KProperty<*>, value : T) = putPreference(name, value)
 
     @Suppress("UNCHECKED_CAST")
-    private fun findPreference(name: String, defValue: T): T = with(preferences) {
-        val res: Any = when (defValue) {
-            is Long -> getLong(name, defValue)
-            is String -> getString(name, defValue)
-            is Int -> getInt(name, defValue)
+    private fun<U> findPreference(name : String, defValue : U) : U = with(preferences) {
+        val res : Any = when (defValue) {
+            is Long    -> getLong(name, defValue)
+            is String  -> getString(name, defValue)
+            is Int     -> getInt(name, defValue)
             is Boolean -> getBoolean(name, defValue)
-            is Float -> getFloat(name, defValue)
-            else -> throw IllegalArgumentException("This type can be saved into Preferences")
+            is Float   -> getFloat(name, defValue)
+            else       -> throw IllegalArgumentException("This type can be saved into Preferences")
         }
-        res as T
+        res as U
     }
 
-    private fun putPreference(name: String, defValue: T) = with(preferences.edit()) {
+    private fun<U> putPreference(name : String, defValue : U) = with(preferences.edit()) {
         when (defValue) {
-            is Long -> putLong(name, defValue)
-            is String -> putString(name, defValue)
-            is Int -> putInt(name, defValue)
+            is Long    -> putLong(name, defValue)
+            is String  -> putString(name, defValue)
+            is Int     -> putInt(name, defValue)
             is Boolean -> putBoolean(name, defValue)
-            is Float -> putFloat(name, defValue)
-            else -> throw IllegalArgumentException("This type can be saved into Preferences")
+            is Float   -> putFloat(name, defValue)
+            else       -> throw IllegalArgumentException("This type can be saved into Preferences")
         }.apply()
     }
 

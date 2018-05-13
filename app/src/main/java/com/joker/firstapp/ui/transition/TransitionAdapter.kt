@@ -19,20 +19,14 @@ import com.joker.firstapp.R
  */
 class TransitionAdapter(var context: Context) : RecyclerView.Adapter<TransitionAdapter.ViewHolder>() {
 
-    var mListener: OnItemClickListener? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_transition, parent, false)
         val holder = ViewHolder(view)
         return holder
-
     }
 
-    override fun getItemCount(): Int {
-        return 10
-    }
-
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder : ViewHolder, position : Int) {
         holder?.root?.setOnClickListener {
             mListener?.onItemClick(it, position)
         }
@@ -41,6 +35,16 @@ class TransitionAdapter(var context: Context) : RecyclerView.Adapter<TransitionA
             true
         }
     }
+
+    var mListener: OnItemClickListener? = null
+
+
+
+    override fun getItemCount(): Int {
+        return 10
+    }
+
+
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val root = view.findViewById<ConstraintLayout>(R.id.item_transition_root)

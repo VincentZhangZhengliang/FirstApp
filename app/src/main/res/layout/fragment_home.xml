@@ -1,43 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".ui.home.fragment.HomeFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fragment.HomeFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+   <ImageView
+       android:scaleType="fitXY"
+       android:layout_width="match_parent"
+       android:src="@drawable/aaa"
+       android:layout_height="@dimen/x380" />
 
-        <TextView
-            android:id="@+id/fragment_home_tv_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="Toolbar"/>
 
-        <TextView
-            android:id="@+id/fragment_home_tv_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="navigation"/>
-
-        <TextView
-            android:id="@+id/fragment_home_tv_transition"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="transition"/>
-
-        <TextView
-            android:id="@+id/fragment_home_tv_coordinator"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="coordinator"/>
-
-    </LinearLayout>
-
-</FrameLayout>
+</LinearLayout>

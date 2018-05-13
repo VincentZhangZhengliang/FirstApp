@@ -9,27 +9,28 @@ import android.widget.ImageView
 /**
  * Created by Vincent;
  * Created on 2018/5/11;
- * DSC:
+ * DSC:   引导页的PagerAdapter
  */
-class SplashAdapter(var context: Context,var resId:IntArray) : PagerAdapter() {
+class SplashAdapter(var context : Context, var resId : IntArray) : PagerAdapter() {
 
-    override fun isViewFromObject(view: View?, `object`: Any?): Boolean {
+    override fun isViewFromObject(view : View, `object` : Any) : Boolean {
         return view == `object`
     }
 
-    override fun getCount(): Int {
+    override fun getCount() : Int {
         return resId.size
     }
 
-    override fun instantiateItem(container: ViewGroup?, position: Int): Any {
+    override fun destroyItem(container : ViewGroup, position : Int, `object` : Any) {
+        container.removeView(`object` as View)
+    }
+
+
+    override fun instantiateItem(container : ViewGroup, position : Int) : Any {
         val img = ImageView(context)
         img.scaleType = ImageView.ScaleType.FIT_XY
         img.setImageResource(resId[position])
-        container?.addView(img)
+        container.addView(img)
         return img
-    }
-
-    override fun destroyItem(container: ViewGroup?, position: Int, `object`: Any?) {
-        container?.removeView(`object` as View)
     }
 }

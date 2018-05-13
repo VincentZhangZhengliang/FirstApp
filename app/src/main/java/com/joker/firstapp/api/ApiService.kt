@@ -13,10 +13,9 @@ import retrofit2.http.POST
  */
 interface ApiService {
 
-
-
     @FormUrlEncoded
     @POST("/user/login")
     fun login(@Field("username") username: String, @Field("password") password: String): Observable<LoginBean>
+
 
 }
