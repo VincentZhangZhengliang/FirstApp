@@ -8,7 +8,7 @@
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/activity_main_bnv"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/x78"
+        android:layout_height="@dimen/dp_56"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/c_FFCCBC"
         app:menu="@menu/bottom_navi_menu"/>

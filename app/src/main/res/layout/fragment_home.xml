@@ -9,7 +9,7 @@
        android:scaleType="fitXY"
        android:layout_width="match_parent"
        android:src="@drawable/aaa"
-       android:layout_height="@dimen/x380" />
+       android:layout_height="@dimen/dp_358" />
 
 
 </LinearLayout>

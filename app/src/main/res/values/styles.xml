@@ -22,7 +22,7 @@
         <item name="android:textSize">14sp</item>
         <item name="actionOverflowMenuStyle" tools:targetApi="lollipop">@style/OverflowMenuTheme
         </item>
-        <item name="android:paddingRight">@dimen/x_5</item>
+        <item name="android:paddingRight">@dimen/dp_5</item>
         <item name="searchViewStyle" tools:ignore="NewApi">@style/SearchivewStyle</item>
 
     </style>
